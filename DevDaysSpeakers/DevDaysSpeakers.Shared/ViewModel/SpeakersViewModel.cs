@@ -67,6 +67,7 @@ namespace DevDaysSpeakers.ViewModel
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("Error: " + ex);
                 error = ex;
             }
             finally
