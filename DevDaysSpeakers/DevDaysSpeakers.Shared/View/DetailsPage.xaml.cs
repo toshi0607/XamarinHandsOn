@@ -29,7 +29,11 @@ namespace DevDaysSpeakers.View
 
         private void ButtonSpeak_Clicked(object sender, EventArgs e)
         {
-            CrossTextToSpeech.Current.Speak(this.speaker.Description);
+            CrossTextToSpeech.Current.Speak(
+                text: this.speaker.Description,
+                queue: false,
+                crossLocale: new Plugin.TextToSpeech.Abstractions.CrossLocale { Language = "ja" }
+            );
         }
 
         private void ButtonWebsite_Clicked(object sender, EventArgs e)
