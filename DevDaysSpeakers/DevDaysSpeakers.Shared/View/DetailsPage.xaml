@@ -8,10 +8,13 @@
       <Image Source="{Binding Avatar}" HeightRequest="200" WidthRequest="200"/>
 
       <Label Text="{Binding Name}" FontSize="24"/>
-      <Label Text="{Binding Title}" TextColor="Purple"/>
+      <Entry Text="{Binding Title, Mode=OneWay}"
+             TextColor="Purple"
+             x:Name="EntryTitle"/>
       <Label Text="{Binding Description}"/>
       <Button Text="読み上げる" x:Name="ButtonSpeak"/>
       <Button Text="ウェブサイトに移動" x:Name="ButtonWebsite"/>
+      <Button Text="保存" x:Name="ButtonSave"/>
     </StackLayout>
   </ScrollView>
 </ContentPage>
